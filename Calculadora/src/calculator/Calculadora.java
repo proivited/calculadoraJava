@@ -9,7 +9,7 @@ public class Calculadora {
 		int segundoNumero;
 		int operacion = 0;
 		String mensaje = "";
-		try (Scanner leerprimerNumero = new Scanner(System.in)) {
+		Scanner leerprimerNumero = new Scanner(System.in); 
 			System.out.println("Introduce tu primer numero:");
 			primerNumero = leerprimerNumero.nextInt();
 			
@@ -22,8 +22,8 @@ public class Calculadora {
 					+ " 3. Multiplicaion"
 					+ " 4. Division");
 			operacion = leerprimerNumero.nextInt();
-		}
 		
+		leerprimerNumero.close();
 		
 		
 		switch(operacion) {
