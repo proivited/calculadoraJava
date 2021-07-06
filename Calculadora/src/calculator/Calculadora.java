@@ -4,29 +4,27 @@ import java.util.Scanner;
 public class Calculadora {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		int primerNumero;
 		int segundoNumero;
 		int operacion = 0;
 		String mensaje = "";
-		Scanner leerprimerNumero = new Scanner(System.in);
-		Scanner leersegundoNumero = new Scanner(System.in);
-		Scanner leeroperacion = new Scanner(System.in);
+		try (Scanner leerprimerNumero = new Scanner(System.in)) {
+			System.out.println("Introduce tu primer numero:");
+			primerNumero = leerprimerNumero.nextInt();
+			
+			System.out.println("Introduce tu segundo numero:");
+			segundoNumero = leerprimerNumero.nextInt();
+			
+			System.out.println("Selecciona la opcion que quieras"
+					+ " 1. Suma"
+					+ " 2. Resta"
+					+ " 3. Multiplicaion"
+					+ " 4. Division");
+			operacion = leerprimerNumero.nextInt();
+		}
 		
 		
-		System.out.println("Introduce tu primer numero:");
-		primerNumero = leerprimerNumero.nextInt();
-		
-		System.out.println("Introduce tu segundo numero:");
-		segundoNumero = leersegundoNumero.nextInt();
-		
-		System.out.println("Selecciona la opcion que quieras"
-				+ " 1. Suma"
-				+ " 2. Resta"
-				+ " 3. Multiplicaion"
-				+ " 4. Division");
-		operacion = leeroperacion.nextInt();
 		
 		switch(operacion) {
 		case 1:
